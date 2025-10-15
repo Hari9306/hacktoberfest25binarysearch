@@ -1,5 +1,5 @@
 def binary_search(arr, target):
-    left, right = 0, len(arr)
+    left, right = 0, len(arr) - 1  # ✅ Fix right boundary
     while left <= right:
         mid = (left + right) // 2
         if arr[mid] == target:
@@ -10,4 +10,4 @@ def binary_search(arr, target):
             right = mid - 1
     return -1
 
-print(binary_search([1, 3, 5, 7, 9], 5))  # Expected 2
+print(binary_search([1, 3, 5, 7, 9], 5))
